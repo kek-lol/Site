@@ -18,6 +18,10 @@ namespace Kek2
                         "~/Scripts/jquery.unobtrusive*",
                         "~/Scripts/jquery.validate*"));
 
+            bundles.Add(new StyleBundle("~/bundles/bootstrap").Include("~/Content/themes/MainTheme/bootstrap-theme.css",
+                "~/Content/themes/MainTheme/bootstrap.css",
+                "~/Content/themes/MainTheme/main.css"));
+
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(

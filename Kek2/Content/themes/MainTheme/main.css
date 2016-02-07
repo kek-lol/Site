@@ -1,0 +1,11 @@
+hr{
+	color:black;
+	height:1px;
+	background-color:black;
+}
+#p1{
+	text-align: right;
+}
+select {
+    width: 350px;
+}

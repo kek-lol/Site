@@ -1,0 +1,118 @@
+﻿@model Kek2.Models.Product
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Product</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.date)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.date)
+            @Html.ValidationMessageFor(model => model.date)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.kind)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.kind)
+            @Html.ValidationMessageFor(model => model.kind)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.product)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.product)
+            @Html.ValidationMessageFor(model => model.product)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.grade)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.grade)
+            @Html.ValidationMessageFor(model => model.grade)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.thickness)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.thickness)
+            @Html.ValidationMessageFor(model => model.thickness)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.width)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.width)
+            @Html.ValidationMessageFor(model => model.width)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.length)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.length)
+            @Html.ValidationMessageFor(model => model.length)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.volume)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.volume)
+            @Html.ValidationMessageFor(model => model.volume)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.place)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.place)
+            @Html.ValidationMessageFor(model => model.place)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.brand)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.brand)
+            @Html.ValidationMessageFor(model => model.brand)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.photo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.photo)
+            @Html.ValidationMessageFor(model => model.photo)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

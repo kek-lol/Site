@@ -1,6 +1,150 @@
-﻿@{
-    ViewBag.Title = "Index";
-}
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="nameListApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.2/angular.min.js"></script>
+    <script src="Scripts/controllers.js"></script>
+    @Styles.Render("~/bundles/bootstrap")
+    <!--<link rel="stylesheet" href="@Url.Content("~/Content/themes/base/MainTheme/bootstrap-theme.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/base/MainTheme/bootstrap.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/base/MainTheme/main.css")">-->
+</head>
+<body ng-controller="nameListCtrl">
+    <div class="container">
+        <div class="page-header">
+            <h2>Добавить товар:</h2>
+        </div>
+        <div class="panel">
+            <table class="table" id="test">
+                <thead>
+                    <tr>
+                        <th>Название:</th>
+                        <th>Значение:</th>
+                        <th>Название:</th>
+                        <th>Значение:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Порода:</td>
+                        <td>
+                            <select  class="selectpicker">
+                                <option>Привет</option>
+                                <option>Привет</option>
+                                <option>Привет</option>
+                                <option>Привет</option>
+                            </select>
+                        </td>
+                        <td>Порода:</td>
+                        <td>
+                            <select class="selectpicker">
+                                <option>Привет</option>
+                                <option>Привет</option>
+                                <option>Привет</option>
+                                <option>Привет</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        
+                        <td>Изделие:</td>
+                        <!--TODO: СМЕНИ КОСТЫЛЬ НА НОРМ КОД-->
+                        <td>
+                            <select class="selectpicker">
+                                <option>Привет</option>
+                                <option>Привет</option>
+                                <option>Привет</option>
+                                <option>Привет</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Сорт:</td>
+                        <td><input type="text" class="form-control" ng-model="gradeValue"></td>
+                    </tr>
+                    <tr>
+                        <td>Толщина(в мм.):</td>
+                        <td><input type="text" class="form-control" ng-model="thicknessValue"></td>
+                    </tr>
+                    <tr>
+                        <td>Ширина(в мм.):</td>
+                        <td><input type="text" class="form-control" ng-model="widthValue"></td>
+                    </tr>
+                    <tr>
+                        <td>Длина(в мм.):</td>
+                        <td><input type="text" class="form-control" ng-model="lengthValue"></td>
+                    </tr>
+                    <tr>
+                        <td>Ежемесячный объем производства:</td>
+                        <td><input type="text" class="form-control" ng-model="volumeValue"></td>
+                    </tr>
+                    <tr>
+                        <td>Место:</td>
+                        <td><input type="text" class="form-control" ng-model="placeValue"></td>
+                    </tr>
+                    <tr>
+                        <td>Марка:</td>
+                        <td><input type="text" class="form-control" ng-model="brandValue"></td>
+                    </tr>
+                    <tr>
+                        <td>Фото:</td>
+                        <td><input type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td>Почта:</td>
+                        <td><input type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td>Телефон:</td>
+                        <td><input type="text" class="form-control"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <span class="input-group-btn">
+                <button class="btn btn-default" ng-click="addNewOrder()">Добавить</button>
+            </span><!--
+            <hr>
+            <h2>На складе:</h2>
+            <div class="container">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Дата</th>
+                            <th>Порода</th>
+                            <th>Изделие</th>
+                            <th>Сорт</th>
+                            <th>Толщина</th>
+                            <th>Ширина</th>
+                            <th>Длина</th>
+                            <th>Ежемесячный объем производства МЗ</th>
+                            <th>Место</th>
+                            <th>Марка</th>
+                            <th>Фото</th>
+                            <th>Контакты</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="wood in data.woods">
+                            <td>{{wood.date}}</td>
+                            <td>{{wood.kind}}</td>
+                            <td>{{wood.product}}</td>
+                            <td>{{wood.grade}}</td>
+                            <td>{{wood.thickness}}</td>
+                            <td>{{wood.width}}</td>
+                            <td>{{wood.length}}</td>
+                            <td>{{wood.volume}}</td>
+                            <td>{{wood.place}}</td>
+                            <td>{{wood.brand}}</td>
+                            <td>{{wood.photo}}</td>
+                            <td><button class="btn btn-default">Связаться с заказчиком</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>-->
+        </div>
+        <!--<p id="p1">Кол-во: {{data.woods.length}}</p>-->
+    </div>
 
-<h2>Index</h2>
-@Html.ActionLink("Home","Kek");
+</body>
+</html>
